@@ -1,4 +1,4 @@
-name: ci abd push GHCR
+name: ci and push GHCR
 
 on:
   push:
