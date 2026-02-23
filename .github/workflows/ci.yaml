@@ -36,5 +36,6 @@ jobs:
           tags: |
             ghcr.io/${{ github.repository }}:${{ github.sha }}
             ghcr.io/${{ github.repository }}:${{ github.event.inputs.image_tag }}
+
       - name: print image tag
         run: echo "Image tag: ${{ github.event.inputs.image_tag }}"
