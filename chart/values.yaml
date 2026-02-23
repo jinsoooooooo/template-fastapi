@@ -2,8 +2,8 @@ image:
   # repository: ghcr.io/<GITHUB_OWNER>/api-fastapi
   # tag: "dev"
   repository: ghcr.io/jinsoooooooo/template-fastapi
-  tag: "main"
-  pullPolicy: IfNotPresent
+  tag: "latest"
+  pullPolicy: Always
 
 service:
   port: 80
