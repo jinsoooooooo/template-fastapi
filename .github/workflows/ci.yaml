@@ -24,7 +24,7 @@ jobs:
 
       - name: set values
         run: |
-          if [[ -n ${{ github.event.inputs.image_tag }} ]]; then
+          if [[ -n "${{ github.event.inputs.image_tag }}" ]]; then
             echo "TAG=${{ github.event.inputs.image_tag }}" >> $GITHUB_ENV
           else
             echo "TAG=latest" >> $GITHUB_ENV
