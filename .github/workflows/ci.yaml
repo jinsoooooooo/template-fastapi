@@ -4,6 +4,11 @@ on:
   # push:
     # branches: ["main"]
   workflow_dispatch:
+    inputs:
+      image_tag:
+        description: "Registry Image Tag name (default: latest)"
+        required: false
+        default: "latest"
 
 permissions:
   contents: write
@@ -30,4 +35,6 @@ jobs:
           push: true
           tags: |
             ghcr.io/${{ github.repository }}:${{ github.sha }}
-            ghcr.io/${{ github.repository }}:latest
+            ghcr.io/${{ github.repository }}:${{ github.event.inputs.image_tag }}
+      - name: print image tag
+        run: echo "Image tag: ${{ github.event.inputs.image_tag }}"

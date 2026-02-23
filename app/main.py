@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
 from base.middleware import LoggingMiddleware
+from core.config import settings
 
 
 
@@ -29,7 +30,7 @@ if __name__ == "__main__":
     import uvicorn
     uvicorn.run(
         app, 
-        host="0.0.0.0", 
-        port=8001,
-        log_level="debug"
+        host=settings.APP_HOST, 
+        port=settings.APP_PORT,
+        log_level=settings.APP_LOG_LEVEL
     )

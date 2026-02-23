@@ -8,3 +8,9 @@ image:
 service:
   port: 80
   targetPort: 8080
+
+env:
+  APP_NAME: "Sample FastAPI"
+  APP_HOST: "0.0.0.0"
+  APP_PORT: "8001"
+  APP_LOG_LEVEL: "debug"

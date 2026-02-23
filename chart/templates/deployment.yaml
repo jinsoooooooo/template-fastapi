@@ -16,6 +16,9 @@ spec:
         - name: api-fastapi
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          envFrom:
+            - configMapRef:
+                name: {{ .Release.Name }}-config
           ports:
             - containerPort: 8080
           readinessProbe:
