@@ -4,7 +4,6 @@
 fastapi/
   app/
     main.py
-    requirements.txt
   Dockerfile
   chart/
     Chart.yaml
@@ -12,5 +11,6 @@ fastapi/
     templates/
       deployment.yaml
       service.yaml
+  requirements.txt
   .github/workflows/ci.yml
 ```
