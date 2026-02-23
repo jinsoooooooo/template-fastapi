@@ -1,8 +1,9 @@
-name: ci-ghcr
+name: ci abd push GHCR
 
 on:
-  # push:
-    # branches: ["main"]
+  push:
+    branches: ["main"]
+    paths: ["requirements.txt", "chart/**"]
   workflow_dispatch:
     inputs:
       image_tag:
