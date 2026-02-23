@@ -9,8 +9,12 @@ from core.exceptions import (
 )
 
 
-@asynccontextmanager    
+from core.log import setup_logging 
+
+
+@asynccontextmanager        
 async def lifespan(app: FastAPI):
+    setup_logging()
     yield
 
 app = FastAPI(
